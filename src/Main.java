@@ -15,5 +15,15 @@ public class Main {
             }
             monthNumber++;
         }
+        System.out.println("Task 02");
+        int i = 0;
+        while (i < 10) {
+            System.out.print(i + 1 + " ");
+            i++;
+        }
+        System.out.println();
+        for (; i >= 1; i--) {
+            System.out.print(i + " ");
+        }
     }
 }
