@@ -28,17 +28,19 @@ public class Main {
         int yPopulation = 12_000_000;
         int bornPerThousand = 17;
         int diedPerThousand = 8;
-        for (int year = 1; year <= 10; year++) {
-            yPopulation = yPopulation * (1_000 + bornPerThousand - diedPerThousand) / 1_000;
-            System.out.println("Через " + year + " лет численность населения страны Y будет равна " + yPopulation);
+        int year = 0;
+        for (;year < 10;) {
+            yPopulation = yPopulation / 1000 * (1_000 + bornPerThousand - diedPerThousand);
+            System.out.println("Через " + ++year + " лет численность населения страны Y будет равна " + yPopulation);
         }
+        System.out.println("Через " + year + " лет численность населения страны Y будет равна " + yPopulation);
         System.out.println("Task 04");
-        int vasiliyDeposit = 15_000;
+        float vasiliyDeposit = 15_000f;
         int vasiliyGoal = 12_000_000;
         int monthlyPercentage = 7;
         monthNumber = 0;
         while (vasiliyDeposit < vasiliyGoal) {
-            vasiliyDeposit = vasiliyDeposit * (100 + monthlyPercentage) / 100;
+            vasiliyDeposit = vasiliyDeposit / 100 * (100 + monthlyPercentage);
             monthNumber++;
             System.out.println("Месяц " + monthNumber + ", сумма накоплений Василия равна " + vasiliyDeposit + " рублей.");
         }
