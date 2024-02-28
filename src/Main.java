@@ -65,5 +65,12 @@ public class Main {
                 System.out.println("Месяц " + monthNumber + ", сумма накоплений Василия равна " + vasiliyDeposit + " рублей.");
             }
         }
+        System.out.println("Task 07");
+        int firstFridayDate = 3;
+        int daysInMonth = 31;
+        for (int date = firstFridayDate; date <= daysInMonth; date = date + 7) {
+            System.out.println("Сегодня пятница, " + date + "-е число. Необходимо подготовить отчет.");
+        }
+
     }
 }
