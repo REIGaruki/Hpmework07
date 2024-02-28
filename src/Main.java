@@ -4,7 +4,7 @@ public class Main {
         double deposit = 0;
         int monthlyDeposition = 15_000;
         int goal = 2_459_000;
-        int yearPercentage = 12;
+        float yearPercentage = 12f;
         int monthNumber = 1;
         while (deposit < goal) {
             deposit = deposit * (100 + yearPercentage / 12) / 100 + monthlyDeposition;
@@ -29,11 +29,11 @@ public class Main {
         int bornPerThousand = 17;
         int diedPerThousand = 8;
         int year = 0;
-        for (;year < 10;) {
+        while (year < 10) {
             yPopulation = yPopulation / 1000 * (1_000 + bornPerThousand - diedPerThousand);
             System.out.println("Через " + ++year + " лет численность населения страны Y будет равна " + yPopulation);
         }
-        System.out.println("Через " + year + " лет численность населения страны Y будет равна " + yPopulation);
+        System.out.println("\nЧерез " + year + " лет численность населения страны Y будет равна " + yPopulation);
         System.out.println("Task 04");
         float vasiliyDeposit = 15_000f;
         int vasiliyGoal = 12_000_000;
@@ -71,6 +71,24 @@ public class Main {
         for (int date = firstFridayDate; date <= daysInMonth; date = date + 7) {
             System.out.println("Сегодня пятница, " + date + "-е число. Необходимо подготовить отчет.");
         }
-
+        System.out.println("Task 08");
+        int firstCometAppearance = 0;
+        int cometPeriod = 79;
+        int currentYear = 2024;
+        int minimalYear = currentYear - 200;
+        int maximalYear = currentYear + 100;
+        //solution 1, 301 iterations
+        for (year = minimalYear; year <= maximalYear; year++) {
+            if (year % cometPeriod == firstCometAppearance % cometPeriod) {
+                System.out.println(year);
+            }
+        }
+        System.out.println();
+        //solution 2, 27 iterations
+        for (year = firstCometAppearance; year <= maximalYear; year = year + cometPeriod) {
+            if (year >= minimalYear) {
+                System.out.println(year);
+            }
+        }
     }
 }
