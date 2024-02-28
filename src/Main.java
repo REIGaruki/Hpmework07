@@ -18,8 +18,7 @@ public class Main {
         System.out.println("Task 02");
         int i = 0;
         while (i < 10) {
-            System.out.print(i + 1 + " ");
-            i++;
+            System.out.print(++i + " ");
         }
         System.out.println();
         for (; i >= 1; i--) {
@@ -32,6 +31,16 @@ public class Main {
         for (int year = 1; year <= 10; year++) {
             yPopulation = yPopulation * (1_000 + bornPerThousand - diedPerThousand) / 1_000;
             System.out.println("Через " + year + " лет численность населения страны Y будет равна " + yPopulation);
+        }
+        System.out.println("Task 04");
+        int vasiliyDeposit = 15_000;
+        int vasiliyGoal = 12_000_000;
+        int monthlyPercentage = 7;
+        monthNumber = 0;
+        while (vasiliyDeposit < vasiliyGoal) {
+            vasiliyDeposit = vasiliyDeposit * (100 + monthlyPercentage) / 100;
+            monthNumber++;
+            System.out.println("Месяц " + monthNumber + ", сумма накоплений Василия равна " + vasiliyDeposit + " рублей.");
         }
     }
 }
