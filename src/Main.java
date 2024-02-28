@@ -48,7 +48,18 @@ public class Main {
         monthNumber = 0;
         vasiliyDeposit = 15_000;
         while (vasiliyDeposit < vasiliyGoal) {
-            vasiliyDeposit = vasiliyDeposit / 100 * (100 + monthlyPercentage);
+            vasiliyDeposit = vasiliyDeposit * (100 + monthlyPercentage) / 100;
+            monthNumber++;
+            if (monthNumber % 6 == 0) {
+                System.out.println("Месяц " + monthNumber + ", сумма накоплений Василия равна " + vasiliyDeposit + " рублей.");
+            }
+        }
+        System.out.println("Task 06");
+        monthNumber = 0;
+        vasiliyDeposit = 15_000;
+        int goalYears = 9;
+        while (monthNumber < goalYears * 12) {
+            vasiliyDeposit = vasiliyDeposit * (100 + monthlyPercentage) / 100;
             monthNumber++;
             if (monthNumber % 6 == 0) {
                 System.out.println("Месяц " + monthNumber + ", сумма накоплений Василия равна " + vasiliyDeposit + " рублей.");
