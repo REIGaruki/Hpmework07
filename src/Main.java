@@ -44,5 +44,15 @@ public class Main {
             monthNumber++;
             System.out.println("Месяц " + monthNumber + ", сумма накоплений Василия равна " + vasiliyDeposit + " рублей.");
         }
+        System.out.println("Task 05");
+        monthNumber = 0;
+        vasiliyDeposit = 15_000;
+        while (vasiliyDeposit < vasiliyGoal) {
+            vasiliyDeposit = vasiliyDeposit / 100 * (100 + monthlyPercentage);
+            monthNumber++;
+            if (monthNumber % 6 == 0) {
+                System.out.println("Месяц " + monthNumber + ", сумма накоплений Василия равна " + vasiliyDeposit + " рублей.");
+            }
+        }
     }
 }
