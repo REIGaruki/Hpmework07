@@ -25,5 +25,13 @@ public class Main {
         for (; i >= 1; i--) {
             System.out.print(i + " ");
         }
+        System.out.println("\nTask 03");
+        int yPopulation = 12_000_000;
+        int bornPerThousand = 17;
+        int diedPerThousand = 8;
+        for (int year = 1; year <= 10; year++) {
+            yPopulation = yPopulation * (1_000 + bornPerThousand - diedPerThousand) / 1_000;
+            System.out.println("Через " + year + " лет численность населения страны Y будет равна " + yPopulation);
+        }
     }
 }
