@@ -29,11 +29,12 @@ public class Main {
         int bornPerThousand = 17;
         int diedPerThousand = 8;
         int year = 0;
-        while (year < 10) {
-            yPopulation = yPopulation / 1000 * (1_000 + bornPerThousand - diedPerThousand);
+        int timeDuration = 10;
+        while (year < timeDuration) {
+            yPopulation += yPopulation * (bornPerThousand - diedPerThousand) / 1000;
             System.out.println("Через " + ++year + " лет численность населения страны Y будет равна " + yPopulation);
         }
-        System.out.println("\nЧерез " + year + " лет численность населения страны Y будет равна " + yPopulation);
+        System.out.println("\nЧерез " + timeDuration + " лет численность населения страны Y будет равна " + yPopulation);
         System.out.println("Task 04");
         float vasiliyDeposit = 15_000f;
         int vasiliyGoal = 12_000_000;
